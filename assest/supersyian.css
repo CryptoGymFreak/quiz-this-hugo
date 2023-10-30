@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.quiz-container {
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #0000ff;
+}
+
+.options {
+    text-align: left;
+}
+
+.option {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.score-container {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
