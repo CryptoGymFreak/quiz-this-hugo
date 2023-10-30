@@ -68,23 +68,21 @@ $(document).ready(function () {
     });
     $("#save-score").on("click", function () {
         console.log($('#store-info').val())
-        var players = []; // will be array of objects; each object has initial SG and score 100
-
-        // Were there old players Im adding the score to?
+        var players = []; 
+       
         if(localStorage.getItem("players")) {
-            players = localStorage.getItem("players") // string
-            players = JSON.parse(players); // array. Hint: parse returns array or object
+            players = localStorage.getItem("players") 
+            players = JSON.parse(players); 
         }
 
-        // Checkpoint: players now have an array of old players or, it's an empty array (if you're the first player on the leaderboard)
-        // push is adding something new to an array
+        
         var playerStats = {initials:$('#store-info').val(), score:score}
         players.push(playerStats);
 
         localStorage.setItem("players", JSON.stringify(players))
     })
-        
-       
+
+   
     $("#restart-button").on("click", function () {
         currentQuestion = 0;
         score = 0;
@@ -123,11 +121,7 @@ $(document).ready(function () {
         $("#score").text(score);
         $(".score-container").show();
         clearInterval(theTimer);
-        // if (score === 100) {
-        //     alert("Uppercut!");
-        // } else {
-        //     alert("Low Blow.");
-        // }
+       
     }
 });
 
